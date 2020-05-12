@@ -1,13 +1,12 @@
 
-#include <IndexPointsAluno.h>
+#include "IndexPointsAluno.h"
 
 /// returns the number of elements in the index
-long IndexPointsAluno::size() { return _redblack.counter; }
+long IndexPointsAluno::size() { return redblack.get_counter();}
 
 /// adds new element to the index. 
 void IndexPointsAluno::add (float key, long idx ) {
-  _redblack_insertnode(key, idx);
-}
+  redblack.insert_node(key, idx);}
 
 
 void IndexPointsAluno::find(std::vector<long> &res, float first, float last ) {
@@ -21,6 +20,5 @@ void IndexPointsAluno::find(std::vector<long> &res, float first, float last ) {
   // where k is the number of elements in the range from first to last
   // in other words: NAO VALE FAZER INORDER COMPLETO E SELECIONAR O RANGE
   // PRECISA UM INORDER ESPERTO QUE ACHA O FIRST em O(log n) E CONTINUA ATE O LAST
-  
-    
+  redblack.find(redblack.get_root(), res, first, last);
 }//find

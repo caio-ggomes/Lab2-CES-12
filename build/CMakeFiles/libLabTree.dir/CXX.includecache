@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/IndexFactory.h
+IndexPointsStlMultimap.h
+-
+IndexPointsAluno.h
+-
+
+../lib/IndexPointsAbstract.h
+vector
+-
+
+../lib/IndexPointsStlMultimap.h
+vector
+-
+map
+-
+IndexPointsAbstract.h
+-
+
+../src/IndexPointsAluno.h
+vector
+-
+map
+-
+IndexPointsAbstract.h
+../src/IndexPointsAbstract.h
+RedBlackTree.h
+../src/RedBlackTree.h
+
+../src/RedBlackTree.h
+bits/stdc++.h
+-
+
+/home/caio/ITA/5_semestre/CES-12/Labs/Lab2/lib/IndexFactory.cpp
+IndexFactory.h
+-
+

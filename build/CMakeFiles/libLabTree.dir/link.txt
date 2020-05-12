@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblibLabTree.a  CMakeFiles/libLabTree.dir/lib/IndexFactory.cpp.o CMakeFiles/libLabTree.dir/lib/IndexPointsStlMultimap.cpp.o CMakeFiles/libLabTree.dir/lib/Point3.cpp.o CMakeFiles/libLabTree.dir/lib/PointReader.cpp.o CMakeFiles/libLabTree.dir/lib/Tick.cpp.o
+/usr/bin/ranlib liblibLabTree.a

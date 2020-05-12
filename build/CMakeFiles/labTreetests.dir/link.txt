@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/labTreetests.dir/test/testTree.cpp.o CMakeFiles/labTreetests.dir/src/IndexPointsAluno.cpp.o CMakeFiles/labTreetests.dir/src/RedBlackTree.cpp.o  -o labTreetests lib/libgtest.a lib/libgtest_main.a liblibLabTree.a lib/libgtest.a -lpthread 

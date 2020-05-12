@@ -2,10 +2,12 @@
 #include <IndexPointsAluno.h>
 
 /// returns the number of elements in the index
-long IndexPointsAluno::size() { return _map.size(); }
+long IndexPointsAluno::size() { return _redblack.counter; }
 
 /// adds new element to the index. 
-void IndexPointsAluno::add (float key, long idx ) { _map.insert(std::make_pair(key,idx)) ; }
+void IndexPointsAluno::add (float key, long idx ) {
+  _redblack_insertnode(key, idx);
+}
 
 
 void IndexPointsAluno::find(std::vector<long> &res, float first, float last ) {
@@ -19,14 +21,6 @@ void IndexPointsAluno::find(std::vector<long> &res, float first, float last ) {
   // where k is the number of elements in the range from first to last
   // in other words: NAO VALE FAZER INORDER COMPLETO E SELECIONAR O RANGE
   // PRECISA UM INORDER ESPERTO QUE ACHA O FIRST em O(log n) E CONTINUA ATE O LAST
-  auto itlow = _map.lower_bound (first);  // itlow points to first
-  auto itup = _map.upper_bound (last);   // itup points to next after last (not to last)
-
-  // print range [itlow,itup), which is the same as [itlow, last] or [first, last]
-  for (auto it=itlow; it!=itup; ++it)
-    //std::cout << (*it).first << " => " << (*it).second << '\n';
-    res.push_back((*it).second);
-
-    
+  
     
 }//find
